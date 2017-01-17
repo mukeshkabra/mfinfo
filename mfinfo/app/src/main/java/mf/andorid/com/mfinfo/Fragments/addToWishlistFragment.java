@@ -1,4 +1,4 @@
-package mf.andorid.com.mfinfo;
+package mf.andorid.com.mfinfo.Fragments;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -24,13 +24,15 @@ import com.google.gson.JsonParser;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+import mf.andorid.com.mfinfo.OkHttpHandler;
+import mf.andorid.com.mfinfo.R;
 import mf.andorid.com.mfinfo.sharedPref.portfolio;
 import mf.andorid.com.mfinfo.sharedPref.portfolioPref;
 
 /**
  * Created by 8398 on 19/12/16.
  */
-public class Wishlistdata extends Fragment {
+public class addToWishlistFragment extends Fragment {
         ListView lv;
         Context context;
         ArrayList prgmName;
@@ -218,7 +220,7 @@ public class Wishlistdata extends Fragment {
             // lv.setAdapter(new CustomAdapter(getActivity(), name.toArray(new String[0]), name.toArray(new String[0])));
 
 
-            System.out.println(TwoFragment.adapter);
+            System.out.println(userPortfolioFragment.adapter);
             //TwoFragment.adapter.refereshData(Sname.toArray(new String[0]), Sname.toArray(new String[0]),Sname.toArray(new String[0]),Sdate.toArray(new String[0]));
 
 

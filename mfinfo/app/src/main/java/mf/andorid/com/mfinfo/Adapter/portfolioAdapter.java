@@ -1,4 +1,4 @@
-package mf.andorid.com.mfinfo;
+package mf.andorid.com.mfinfo.Adapter;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -12,13 +12,17 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import mf.andorid.com.mfinfo.Activity.mfDetailActivity;
+import mf.andorid.com.mfinfo.Constant.PortfolioInfo;
+import mf.andorid.com.mfinfo.R;
+
 /**
  * Created by 8398 on 25/12/16.
  */
-public class ppAdapter extends RecyclerView.Adapter<ppAdapter.ContactViewHolder> {
+public class portfolioAdapter extends RecyclerView.Adapter<portfolioAdapter.ContactViewHolder> {
     private List<PortfolioInfo> contactList;
 
-    public ppAdapter(List<PortfolioInfo> contactList) {
+    public portfolioAdapter(List<PortfolioInfo> contactList) {
         this.contactList = contactList;
     }
 
@@ -97,7 +101,7 @@ public class ppAdapter extends RecyclerView.Adapter<ppAdapter.ContactViewHolder>
 
 
                    PortfolioInfo ci = contactList.get(getAdapterPosition());
-                   Intent newActivity = new Intent(v.getContext().getApplicationContext(), mfdetailActivity1.class);
+                   Intent newActivity = new Intent(v.getContext().getApplicationContext(), mfDetailActivity.class);
                    newActivity.putExtra("code", ci.mCode);
                    newActivity.putExtra("Name", ci.mName);
                    newActivity.putExtra("Nav", Double.toString(ci.mNav));

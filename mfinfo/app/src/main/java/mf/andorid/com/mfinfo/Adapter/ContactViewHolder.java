@@ -1,8 +1,10 @@
-package mf.andorid.com.mfinfo;
+package mf.andorid.com.mfinfo.Adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
+
+import mf.andorid.com.mfinfo.R;
 
 /**
  * Created by 8398 on 25/12/16.

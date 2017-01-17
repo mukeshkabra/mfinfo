@@ -1,28 +1,24 @@
-package mf.andorid.com.mfinfo;
+package mf.andorid.com.mfinfo.Adapter;
 
 /**
  * Created by 8398 on 11/11/16.
  */
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.util.Collections;
+import mf.andorid.com.mfinfo.R;
 
-public class CustomAdapter extends BaseAdapter{
+public class mfListAdapter extends BaseAdapter{
     String [] result;
     Context context;
     String [] imageId;
     private static LayoutInflater inflater=null;
-    public CustomAdapter(Activity mfactivity,String[] prgmNameList, String[] prgmImages) {
+    public mfListAdapter(Activity mfactivity, String[] prgmNameList, String[] prgmImages) {
         // TODO Auto-generated constructor stub
         result=prgmNameList;
         context=mfactivity.getApplicationContext();

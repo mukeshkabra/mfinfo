@@ -1,4 +1,4 @@
-package mf.andorid.com.mfinfo;
+package mf.andorid.com.mfinfo.Fragments;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -9,6 +9,8 @@ import android.widget.EditText;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+
+import mf.andorid.com.mfinfo.R;
 
 /**
  * Created by 8398 on 23/12/16.
@@ -45,7 +47,7 @@ public class DatePickerFragment extends DialogFragment
         System.out.println("Date = " + formattedDate);
         EditText editText1=(EditText)getActivity().findViewById(R.id.editText_nav);
 
-        String nav=Wishlistdata.downloadUrl(Integer.parseInt(code), "02-Nov-2016");
+        String nav=addToWishlistFragment.downloadUrl(Integer.parseInt(code), "02-Nov-2016");
         editText1.setText(nav);
 
     }

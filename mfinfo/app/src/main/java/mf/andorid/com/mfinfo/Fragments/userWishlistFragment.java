@@ -1,4 +1,4 @@
-package mf.andorid.com.mfinfo;
+package mf.andorid.com.mfinfo.Fragments;
 
 /**
  * Created by 8398 on 11/11/16.
@@ -26,8 +26,18 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
+import mf.andorid.com.mfinfo.Activity.mfDetailActivity;
+import mf.andorid.com.mfinfo.Adapter.ContactInfo;
+import mf.andorid.com.mfinfo.Adapter.wishlistAdapter;
+import mf.andorid.com.mfinfo.Constant.PortfolioInfo;
+import mf.andorid.com.mfinfo.PostTask;
+import mf.andorid.com.mfinfo.Product;
+import mf.andorid.com.mfinfo.R;
+import mf.andorid.com.mfinfo.SharedPref;
 
-public class watchlist extends Fragment implements FragmentLifecycle{
+
+
+public class userWishlistFragment extends Fragment implements FragmentLifecycle{
     ListView lv;
     private static final String TAG = "TESTFRAGMENT";
 
@@ -41,7 +51,7 @@ public class watchlist extends Fragment implements FragmentLifecycle{
 
 
 
-    public static PortfolioAdapter adapter;
+    public static wishlistAdapter adapter;
 
 
     final String[] itemname1 = {
@@ -60,7 +70,7 @@ public class watchlist extends Fragment implements FragmentLifecycle{
             "5"
     };
 
-    public watchlist() {
+    public userWishlistFragment() {
         // Required empty public constructor
 
     }
@@ -109,7 +119,7 @@ public class watchlist extends Fragment implements FragmentLifecycle{
             System.out.println(nav.size());
             lv = (ListView) view.findViewById(R.id.listView_watchlist);
             // lv.setAdapter(new CustomAdapter(getActivity(), name.toArray(new String[0]), name.toArray(new String[0])));
-            adapter = new PortfolioAdapter(getActivity(), name.toArray(new String[0]), nav.toArray(new String[0]),cha.toArray(new String[0]),date.toArray(new String[0]));
+            adapter = new wishlistAdapter(getActivity(), name.toArray(new String[0]), nav.toArray(new String[0]),cha.toArray(new String[0]),date.toArray(new String[0]));
             // CustomAdapter adapter = new CustomAdapter(getActivity(), itemname1, itemname2);
             System.out.println(adapter);
 
@@ -118,7 +128,7 @@ public class watchlist extends Fragment implements FragmentLifecycle{
             lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Intent newActivity = new Intent(getActivity(), mfdetailActivity1.class);
+                    Intent newActivity = new Intent(getActivity(), mfDetailActivity.class);
                     newActivity.putExtra("code", code.get(position));
                     newActivity.putExtra("Name", name.get(position));
                     newActivity.putExtra("Nav", nav.get(position));
@@ -141,7 +151,7 @@ public class watchlist extends Fragment implements FragmentLifecycle{
 
     }
     public void onListItemClick(ListView l, View v, int position, long id) {
-        Intent newActivity = new Intent(getActivity(),mfdetailActivity1.class);
+        Intent newActivity = new Intent(getActivity(),mfDetailActivity.class);
         newActivity.putExtra("code", code.get(position));
         newActivity.putExtra("Name", name.get(position));
         newActivity.putExtra("Nav", nav.get(position));

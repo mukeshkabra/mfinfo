@@ -1,4 +1,4 @@
-package mf.andorid.com.mfinfo;
+package mf.andorid.com.mfinfo.Fragments;
 
 public interface FragmentLifecycle {
 

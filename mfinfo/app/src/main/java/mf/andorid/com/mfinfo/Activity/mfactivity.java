@@ -1,4 +1,4 @@
-package mf.andorid.com.mfinfo;
+package mf.andorid.com.mfinfo.Activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +13,10 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+
+import mf.andorid.com.mfinfo.Adapter.mfListAdapter;
+import mf.andorid.com.mfinfo.OkHttpHandler;
+import mf.andorid.com.mfinfo.R;
 
 
 /**
@@ -42,11 +46,11 @@ public class mfactivity extends AppCompatActivity{
         downloadUrl(pId);
         context=this;
         lv=(ListView)findViewById(R.id.listView);
-        lv.setAdapter(new CustomAdapter(this, name.toArray(new String[0]), nav.toArray(new String[0])));
+        lv.setAdapter(new mfListAdapter(this, name.toArray(new String[0]), nav.toArray(new String[0])));
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent newActivity = new Intent(mfactivity.this,mfdetailActivity1.class);
+                Intent newActivity = new Intent(mfactivity.this,mfDetailActivity.class);
                 newActivity.putExtra("code",code.get(position));
                 newActivity.putExtra("Name",name.get(position));
                 newActivity.putExtra("Nav",nav.get(position));

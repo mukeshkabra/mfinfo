@@ -3,33 +3,27 @@ package mf.andorid.com.mfinfo;
 /**
  * Created by 8398 on 11/11/16.
  */
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import android.os.Bundle;
+import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.support.v4.app.FragmentActivity;;
-import android.support.v4.app.ListFragment;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.TreeMap;
 
-import android.widget.ListView;
-import android.widget.Toast;
-
+import mf.andorid.com.mfinfo.Activity.mfactivity;
 
 public class TwoFragment1 extends ListFragment {
     ArrayList<String> al=new ArrayList<String>();

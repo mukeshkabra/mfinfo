@@ -1,4 +1,4 @@
-package mf.andorid.com.mfinfo;
+package mf.andorid.com.mfinfo.Activity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -28,10 +28,19 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import mf.andorid.com.mfinfo.Fragments.addToWishlistFragment;
+import mf.andorid.com.mfinfo.OkHttpHandler;
+import mf.andorid.com.mfinfo.Pagertest;
+import mf.andorid.com.mfinfo.Product;
+import mf.andorid.com.mfinfo.R;
+import mf.andorid.com.mfinfo.SharedPref;
+import mf.andorid.com.mfinfo.testFragment;
+import mf.andorid.com.mfinfo.testFragment2;
+
 /**
  * Created by 8398 on 29/11/16.
  */
-public class mfdetailActivity1 extends FragmentActivity {
+public class mfDetailActivity extends FragmentActivity {
     public double lastdayNav;
     public double weeklychange;
     DecimalFormat df = new DecimalFormat("0.00");
@@ -100,10 +109,10 @@ public class mfdetailActivity1 extends FragmentActivity {
         addTo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(mfdetailActivity1.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(mfDetailActivity.this);
                 builder.setTitle("Enter Amount you Invested");
 
-// Set up the input
+            // Set up the input
                 final EditText input = new EditText(getApplicationContext());
 // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
                 input.setInputType(InputType.TYPE_CLASS_TEXT );
@@ -129,7 +138,7 @@ public class mfdetailActivity1 extends FragmentActivity {
                 viewPager = (ViewPager) findViewById(R.id.viewpager_fr);
                 //FragmentManager fragmentManager = getSupportFragmentManager();
                 transaction = fragmentManager.beginTransaction();
-                Wishlistdata wi1=new Wishlistdata();
+                addToWishlistFragment wi1=new addToWishlistFragment();
                 Bundle wishlistBundle=new Bundle();
                 wishlistBundle.putString("mfName",name);
                 wishlistBundle.putString("mCode",code);

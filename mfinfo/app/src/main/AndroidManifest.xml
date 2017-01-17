@@ -17,8 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".mfactivity" android:label="Teste"> </activity>
-        <activity android:name=".mfdetailActivity1" android:label="Testd"> </activity>
+        <activity android:name=".Activity.mfDetailActivity" android:label="Testd"> </activity>
+        <activity android:name=".Activity.mfactivity" android:label="Testd"> </activity>
+
     </application>
 
 </manifest>

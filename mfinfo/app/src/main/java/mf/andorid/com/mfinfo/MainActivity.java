@@ -1,4 +1,5 @@
 package mf.andorid.com.mfinfo;
+
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,10 @@ import android.support.v7.widget.Toolbar;
 import java.util.ArrayList;
 import java.util.List;
 
+import mf.andorid.com.mfinfo.Fragments.listMutualFund;
+import mf.andorid.com.mfinfo.Fragments.mfInfoFragment;
+import mf.andorid.com.mfinfo.Fragments.userPortfolioFragment;
+import mf.andorid.com.mfinfo.Fragments.userWishlistFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,11 +44,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new OneFragment(), "MF");
-        adapter.addFragment(new Listfragementtest(), "List");
-        adapter.addFragment(new TwoFragment(), "Portfolio");
-        adapter.addFragment(new watchlist(), "Watchlist");
-        adapter.addFragment(new TwoFragment(), "Feedback");
+        adapter.addFragment(new mfInfoFragment(), "MF");
+        adapter.addFragment(new listMutualFund(), "List");
+        adapter.addFragment(new userPortfolioFragment(), "Portfolio");
+        adapter.addFragment(new userWishlistFragment(), "Watchlist");
+        adapter.addFragment(new userPortfolioFragment(), "Feedback");
 
         viewPager.setAdapter(adapter);
         viewPager.setOnPageChangeListener(myOnPageChangeListener);

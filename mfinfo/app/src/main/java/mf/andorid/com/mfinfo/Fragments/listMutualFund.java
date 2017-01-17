@@ -1,4 +1,4 @@
-package mf.andorid.com.mfinfo;
+package mf.andorid.com.mfinfo.Fragments;
 
 /**
  * Created by 8398 on 11/11/16.
@@ -23,12 +23,11 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.TreeMap;
 
-;
-;
-;
+import mf.andorid.com.mfinfo.Activity.mfactivity;
+import mf.andorid.com.mfinfo.OkHttpHandler;
+import mf.andorid.com.mfinfo.R;
 
-
-public class Listfragementtest extends ListFragment {
+public class listMutualFund extends ListFragment {
     ArrayList<String> al=new ArrayList<String>();
     String[] AndroidOS = new String[] { "Cupcake","Donut","Eclair","Froyo","Gingerbread","Honeycomb","Ice Cream SandWich","Jelly Bean","KitKat" };
     String[] Version = new String[]{"1.5","1.6","2.0-2.1","2.2","2.3","3.0-3.2","4.0","4.1-4.3","4.4"};

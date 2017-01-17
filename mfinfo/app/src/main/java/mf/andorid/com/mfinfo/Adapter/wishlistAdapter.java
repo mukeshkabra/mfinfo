@@ -1,4 +1,4 @@
-package mf.andorid.com.mfinfo;
+package mf.andorid.com.mfinfo.Adapter;
 
 /**
  * Created by 8398 on 11/11/16.
@@ -12,14 +12,16 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-public class PortfolioAdapter extends BaseAdapter{
+import mf.andorid.com.mfinfo.R;
+
+public class wishlistAdapter extends BaseAdapter{
     String [] result;
     Context context;
     String [] imageId;
     String[] changes;
     String[] date;
     private static LayoutInflater inflater=null;
-    public PortfolioAdapter(Activity mfactivity, String[] prgmNameList, String[] prgmImages,String[] mchanges,String[] mdate) {
+    public wishlistAdapter(Activity mfactivity, String[] prgmNameList, String[] prgmImages, String[] mchanges, String[] mdate) {
         // TODO Auto-generated constructor stub
         result=prgmNameList;
         context=mfactivity.getApplicationContext();

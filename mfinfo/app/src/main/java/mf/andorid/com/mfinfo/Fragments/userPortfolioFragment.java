@@ -1,4 +1,4 @@
-package mf.andorid.com.mfinfo;
+package mf.andorid.com.mfinfo.Fragments;
 
 /**
  * Created by 8398 on 11/11/16.
@@ -19,11 +19,16 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import mf.andorid.com.mfinfo.Activity.mfDetailActivity;
+import mf.andorid.com.mfinfo.Adapter.ContactInfo;
+import mf.andorid.com.mfinfo.Adapter.portfolioAdapter;
+import mf.andorid.com.mfinfo.Adapter.wishlistAdapter;
+import mf.andorid.com.mfinfo.Constant.PortfolioInfo;
+import mf.andorid.com.mfinfo.R;
 import mf.andorid.com.mfinfo.sharedPref.portfolio;
 import mf.andorid.com.mfinfo.sharedPref.portfolioPref;
 
-
-public class TwoFragment extends Fragment implements FragmentLifecycle{
+public class userPortfolioFragment extends Fragment implements FragmentLifecycle{
     ListView lv;
     private static final String TAG = "TESTFRAGMENT";
 
@@ -33,7 +38,7 @@ public class TwoFragment extends Fragment implements FragmentLifecycle{
     public ArrayList<String> nav=new ArrayList<>();
     public ArrayList<String> code=new ArrayList<>();
     public ArrayList<String> cha=new ArrayList<>();
-    public static PortfolioAdapter adapter;
+    public static wishlistAdapter adapter;
 
 
     final String[] itemname1 = {
@@ -52,7 +57,7 @@ public class TwoFragment extends Fragment implements FragmentLifecycle{
             "5"
     };
 
-    public TwoFragment() {
+    public userPortfolioFragment() {
         // Required empty public constructor
     }
 
@@ -94,7 +99,7 @@ public class TwoFragment extends Fragment implements FragmentLifecycle{
 
 
             }
-            ppAdapter padapter=new ppAdapter(resultPortfolio);
+            portfolioAdapter padapter=new portfolioAdapter(resultPortfolio);
             recList.setAdapter(padapter);
 
 
@@ -133,7 +138,7 @@ public class TwoFragment extends Fragment implements FragmentLifecycle{
 
     }
     public void onListItemClick(ListView l, View v, int position, long id) {
-        Intent newActivity = new Intent(getActivity(),mfdetailActivity1.class);
+        Intent newActivity = new Intent(getActivity(),mfDetailActivity.class);
         newActivity.putExtra("code", code.get(position));
         newActivity.putExtra("Name", name.get(position));
         newActivity.putExtra("Nav", nav.get(position));
