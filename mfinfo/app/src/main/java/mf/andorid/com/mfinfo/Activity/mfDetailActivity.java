@@ -28,14 +28,15 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import mf.andorid.com.mfinfo.Fragments.addToWishlistFragment;
+import mf.andorid.com.mfinfo.Adapter.Product;
+import mf.andorid.com.mfinfo.Fragments.addToPortfolioFragment;
+import mf.andorid.com.mfinfo.Fragments.mfHistoryFragment;
 import mf.andorid.com.mfinfo.OkHttpHandler;
-import mf.andorid.com.mfinfo.Pagertest;
-import mf.andorid.com.mfinfo.Product;
 import mf.andorid.com.mfinfo.R;
-import mf.andorid.com.mfinfo.SharedPref;
-import mf.andorid.com.mfinfo.testFragment;
+import mf.andorid.com.mfinfo.sharedPref.wishlistsharedPref;
 import mf.andorid.com.mfinfo.testFragment2;
+
+;
 
 /**
  * Created by 8398 on 29/11/16.
@@ -46,7 +47,7 @@ public class mfDetailActivity extends FragmentActivity {
     DecimalFormat df = new DecimalFormat("0.00");
     SharedPreferences sharedpreferences;
     public static final String mypreference = "mypref";
-    public SharedPref sharedPreference;
+    public wishlistsharedPref sharedPreference;
     Button addTo;
     ViewPagerAdapter pagerAdapter;
     ViewPager viewPager;
@@ -59,14 +60,14 @@ public class mfDetailActivity extends FragmentActivity {
     FragmentManager fragmentManager;
     FragmentTransaction transaction;
     Button watchlist;
-    testFragment t1;
+    mfHistoryFragment t1;
     String change;
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
         sharedpreferences = getSharedPreferences(mypreference,
                 getBaseContext().MODE_PRIVATE);
-        sharedPreference = new SharedPref();
+        sharedPreference = new wishlistsharedPref();
         Intent intent=getIntent();
         FragmentManager fragMan = this.getSupportFragmentManager();
 
@@ -82,7 +83,7 @@ public class mfDetailActivity extends FragmentActivity {
         fragmentManager = getSupportFragmentManager();
         transaction = fragmentManager
                 .beginTransaction();
-        t1=new testFragment();
+        t1=new mfHistoryFragment();
         Bundle bundle1 = new Bundle();
         bundle1.putString("key1", code);
         t1.setArguments(bundle1);
@@ -138,7 +139,7 @@ public class mfDetailActivity extends FragmentActivity {
                 viewPager = (ViewPager) findViewById(R.id.viewpager_fr);
                 //FragmentManager fragmentManager = getSupportFragmentManager();
                 transaction = fragmentManager.beginTransaction();
-                addToWishlistFragment wi1=new addToWishlistFragment();
+                addToPortfolioFragment wi1=new addToPortfolioFragment();
                 Bundle wishlistBundle=new Bundle();
                 wishlistBundle.putString("mfName",name);
                 wishlistBundle.putString("mCode",code);
@@ -191,7 +192,6 @@ public class mfDetailActivity extends FragmentActivity {
 
         transaction.replace(R.id.frame, t1, "Hello");
         transaction.addToBackStack("Hello").commit();
-        Pagertest p1=new Pagertest();
         //transaction.add(R.id.frame, p1, "Hello");
         //transaction.commit();
 
@@ -205,7 +205,7 @@ public class mfDetailActivity extends FragmentActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         Bundle bundle = new Bundle();
         bundle.putString("key1", code);
-        testFragment t1=new testFragment();
+        mfHistoryFragment t1=new mfHistoryFragment();
         t1.setArguments(bundle);
         testFragment2 t2=new testFragment2();
         t2.setArguments(bundle);
@@ -304,7 +304,7 @@ public class mfDetailActivity extends FragmentActivity {
             Product p=new Product(mname,mNav,code,mchange,date);
             sharedPreference.addFavorite(getApplicationContext(), p);
             editor.commit();
-            sharedPreference = new SharedPref();
+            sharedPreference = new wishlistsharedPref();
             ArrayList<Product> p11=sharedPreference.getFavorites(getApplicationContext());
             ArrayList<String> name1=new ArrayList<>();
             ArrayList<String> nav1=new ArrayList<>();

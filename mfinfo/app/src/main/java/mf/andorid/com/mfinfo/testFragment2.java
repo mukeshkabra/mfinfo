@@ -3,6 +3,7 @@ package mf.andorid.com.mfinfo;
 /**
  * Created by 8398 on 11/11/16.
  */
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -17,6 +18,8 @@ import org.json.JSONObject;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Iterator;
+
+import mf.andorid.com.mfinfo.Adapter.mfHistorylistFragment;
 
 public class testFragment2 extends Fragment{
     TextView text,vers;
@@ -67,7 +70,7 @@ public class testFragment2 extends Fragment{
         //TableLayout tl = (TableLayout)view.findViewById(R.id.tableLayout1de);
         myList = (ListView)view.findViewById(R.id.list);
 
-        myList.setAdapter(new MyCustomAdapter(this.getActivity(),list,list1));
+        myList.setAdapter(new mfHistorylistFragment(this.getActivity(),list,list1));
 
 
 

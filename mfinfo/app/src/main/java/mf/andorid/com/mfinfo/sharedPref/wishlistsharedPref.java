@@ -1,4 +1,5 @@
-package mf.andorid.com.mfinfo;
+package mf.andorid.com.mfinfo.sharedPref;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -9,13 +10,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import mf.andorid.com.mfinfo.Adapter.Product;
 
-public class SharedPref {
+
+public class wishlistsharedPref {
 
     public static final String PREFS_NAME = "PRODUCT_APP";
     public static final String FAVORITES = "Product_Favorite";
 
-    public SharedPref() {
+    public wishlistsharedPref() {
         super();
     }
 

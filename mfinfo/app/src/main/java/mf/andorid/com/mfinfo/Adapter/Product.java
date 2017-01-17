@@ -1,16 +1,16 @@
-package mf.andorid.com.mfinfo;
+package mf.andorid.com.mfinfo.Adapter;
 
 /**
  * Created by 8398 on 30/11/16.
  */
 public class Product {
-    private String mName;
-    private String mcode;
-    private String mNav;
-    private String mChange;
-    private String mdate;
+    public String mName;
+    public String mcode;
+    public String mNav;
+    public String mChange;
+    public String mdate;
 
-    public Product(String name, String mnav, String mcode,String change,String mdate) {
+    public Product(String name, String mnav, String mcode, String change, String mdate) {
         super();
         this.mName = name;
         this.mNav = mnav;

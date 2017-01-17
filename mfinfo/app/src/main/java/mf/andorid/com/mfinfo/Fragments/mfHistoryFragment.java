@@ -1,4 +1,4 @@
-package mf.andorid.com.mfinfo;
+package mf.andorid.com.mfinfo.Fragments;
 
 /**
  * Created by 8398 on 11/11/16.
@@ -34,7 +34,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class testFragment extends Fragment{
+import mf.andorid.com.mfinfo.Adapter.mfHistorylistFragment;
+import mf.andorid.com.mfinfo.OkHttpHandler;
+import mf.andorid.com.mfinfo.R;
+
+public class mfHistoryFragment extends Fragment{
     TextView text,vers;
     String data;
     public  ArrayList<String> date=new ArrayList<String>();
@@ -43,11 +47,11 @@ public class testFragment extends Fragment{
     public  Map<String ,String> hm=new HashMap<>();
     HashMap<String,String > datehm=new HashMap<>();
 
-    public testFragment() {
+    public mfHistoryFragment() {
         // Required empty public constructor
     }
-    public static testFragment newInstance() {
-        testFragment fragment = new testFragment();
+    public static mfHistoryFragment newInstance() {
+        mfHistoryFragment fragment = new mfHistoryFragment();
 
         return fragment;
     }
@@ -159,7 +163,7 @@ public class testFragment extends Fragment{
 
         myList = (ListView)view.findViewById(R.id.list);
 
-        myList.setAdapter(new MyCustomAdapter(this.getActivity(),list,list1));
+        myList.setAdapter(new mfHistorylistFragment(this.getActivity(),list,list1));
 
 
         return view;

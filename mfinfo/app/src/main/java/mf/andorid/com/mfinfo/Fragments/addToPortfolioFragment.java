@@ -32,7 +32,7 @@ import mf.andorid.com.mfinfo.sharedPref.portfolioPref;
 /**
  * Created by 8398 on 19/12/16.
  */
-public class addToWishlistFragment extends Fragment {
+public class addToPortfolioFragment extends Fragment {
         ListView lv;
         Context context;
         ArrayList prgmName;

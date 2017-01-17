@@ -1,4 +1,4 @@
-package mf.andorid.com.mfinfo;
+package mf.andorid.com.mfinfo.Adapter;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,15 +7,18 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import mf.andorid.com.mfinfo.R;
+
 /**
  * Created by 8398 on 14/12/16.
  */
-public class MyCustomAdapter extends BaseAdapter {
+public class mfHistorylistFragment extends BaseAdapter {
     private ArrayList<String> mListItems;
     private LayoutInflater mLayoutInflater;
     private ArrayList<String> mValue;
 
-    public MyCustomAdapter(Context context, ArrayList<String> arrayList,ArrayList<String> value){
+    public mfHistorylistFragment(Context context, ArrayList<String> arrayList, ArrayList<String> value){
 
         mListItems = arrayList;
         mValue=value;

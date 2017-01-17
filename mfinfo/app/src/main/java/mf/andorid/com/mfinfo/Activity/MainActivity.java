@@ -1,4 +1,4 @@
-package mf.andorid.com.mfinfo;
+package mf.andorid.com.mfinfo.Activity;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -17,6 +17,7 @@ import mf.andorid.com.mfinfo.Fragments.listMutualFund;
 import mf.andorid.com.mfinfo.Fragments.mfInfoFragment;
 import mf.andorid.com.mfinfo.Fragments.userPortfolioFragment;
 import mf.andorid.com.mfinfo.Fragments.userWishlistFragment;
+import mf.andorid.com.mfinfo.R;
 
 public class MainActivity extends AppCompatActivity {
 

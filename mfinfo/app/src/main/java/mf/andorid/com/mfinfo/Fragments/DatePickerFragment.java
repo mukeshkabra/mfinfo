@@ -47,7 +47,7 @@ public class DatePickerFragment extends DialogFragment
         System.out.println("Date = " + formattedDate);
         EditText editText1=(EditText)getActivity().findViewById(R.id.editText_nav);
 
-        String nav=addToWishlistFragment.downloadUrl(Integer.parseInt(code), "02-Nov-2016");
+        String nav=addToPortfolioFragment.downloadUrl(Integer.parseInt(code), "02-Nov-2016");
         editText1.setText(nav);
 
     }
