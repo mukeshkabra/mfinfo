@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ff7b997e">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Schema name"
+        android:id="@+id/textViewt"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_marginLeft="20dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please enter date"
+        android:layout_below="@+id/textViewt"
+        android:paddingTop="30dp"
+        android:textColor="#ffffff"
+        android:id="@+id/textView_date"
+        android:layout_marginLeft="20dp"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:background="@drawable/testing_gradient"
+        android:id="@+id/editText_Date"
+        android:layout_below="@+id/textView_date"
+        android:layout_marginLeft="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter amount invested"
+        android:textColor="#ffffff"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/editText_Date"
+        android:id="@+id/textView_amount" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:paddingLeft="10dp"
+
+        android:background="@drawable/testing_gradient"
+        android:id="@+id/editText_amount"
+        android:layout_below="@+id/textView_amount"
+        android:layout_marginLeft="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nav on that date"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/editText_amount"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/textView_nav" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:paddingLeft="10dp"
+
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/testing_gradient"
+        android:id="@+id/editText_nav"
+        android:layout_below="@+id/textView_nav"
+         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Units"
+        android:layout_marginLeft="20dp"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/editText_nav"
+        android:id="@+id/textView_units" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:paddingLeft="10dp"
+
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/textView_units"
+        android:background="@drawable/testing_gradient"
+        android:id="@+id/editText_units" />
+
+    <Button
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:layout_below="@+id/textView_date"
+        android:layout_toRightOf="@+id/editText_Date"
+        android:cropToPadding="true"
+        />
+    <Button
+        android:id="@+id/btn_Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="40dp"
+
+        android:layout_below="@+id/editText_units"
+        android:cropToPadding="true"
+        />
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cancel"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="40dp"
+
+        android:layout_below="@+id/editText_units"
+        android:layout_toRightOf="@+id/btn_Save"
+        android:cropToPadding="true"
+        />
+
+</RelativeLayout>

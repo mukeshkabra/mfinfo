@@ -1,0 +1,93 @@
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardBackgroundColor="#ff10bbe8"
+
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#ff10bbe8"
+            android:text="contact det"
+            android:textStyle="bold"
+
+            android:gravity="center_vertical"
+            android:textColor="#ff000000"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:textSize="15dp"
+            android:layout_below="@id/title"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/txtSurname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Surname"
+            android:textStyle="bold"
+
+            android:gravity="center_vertical"
+            android:textSize="10dp"
+            android:layout_below="@id/txtName"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"/>
+        <TextView
+            android:id="@+id/txttotalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="totalAmount"
+            android:gravity="center_vertical"
+            android:textSize="10dp"
+            android:layout_below="@id/txtSurname"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/txtName"
+            android:padding="50dp"
+            android:layout_alignBaseline="@id/txtName"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/upIcon"
+            android:layout_toRightOf="@id/txttotalAmount"
+            android:paddingLeft="50dp"
+            android:layout_below="@id/txtName"
+            android:src="@drawable/bullish"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/downIcon"
+            android:layout_toRightOf="@id/txttotalAmount"
+            android:paddingLeft="50dp"
+            android:layout_below="@id/txtName"
+            android:src="@drawable/bearish"/>
+
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>
